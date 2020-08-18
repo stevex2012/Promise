@@ -17,12 +17,11 @@ function errorLog(error){
     console.log(error);
 }
 
-console.log('123');
 
 promise.then(successLog,errorLog);
 
 new MyPromise((resolve,reject)=>{
-    resolve(18888);
+    resolve('同步任务。。。');
 }).then((val)=>{
     console.log(val);
 })
