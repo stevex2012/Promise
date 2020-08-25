@@ -12,7 +12,7 @@ let promise = new MyPromise((resolve, reject) => {
 let f1 = function (data) {
 
     console.log(`f1 : ${data}`);
-    return new Promise((resolve, reject) => {
+    return new MyPromise((resolve, reject) => {
         fs.readFile('../file2.txt', 'utf-8', function (err, data) {
 
             err ? reject(err) : resolve(data);
@@ -21,7 +21,7 @@ let f1 = function (data) {
 }
 let f2 = function (data) {
     console.log(`f2 : ${data}`);
-    return new Promise((resolve, reject) => {
+    return new MyPromise((resolve, reject) => {
         fs.readFile('../file3.txt', 'utf-8', function (err, data) {
 
             err ? reject(err) : resolve(data);
